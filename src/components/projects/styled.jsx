@@ -9,10 +9,18 @@ export const Introduction = styled.div`
   display: flex;
   justify-content: space-between;
   height: 600px;
-  // top: -10rem;
-  // position: relative;
   align-items: center;
+  @media only screen and (max-width: 520px) {
+    width: 90%;
+    position: relative;
+    top: 10rem;
+    display: flow-root;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 `;
+
 export const Intro = styled.div`
   font-size: 1.5rem;
   color: ${(props) => props.theme.introColor};
@@ -25,6 +33,9 @@ export const Name = styled.div`
   background: ${(props) => props.theme.headingColor};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media only screen and (max-width: 520px) {
+    font-size: 3rem;
+  }
 `;
 export const Profile = styled.div`
   font-size: 1.5rem;
@@ -42,9 +53,16 @@ export const Social = styled.div`
       rgba(0, 212, 255, 1) 100%
     ));
   }
+  @media only screen and (max-width: 520px) {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    height: fit-content;
+    margin-top: 3rem;
+  }
 `;
-
-export const Item = styled.div``;
 
 export const Work = styled.div`
   width: 75%;
@@ -54,6 +72,12 @@ export const Work = styled.div`
     border: none;
     background: ${(props) => props.theme.headingColor};
     height: 1px;
+    @media only screen and (max-width: 520px) {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 520px) {
+    width: 90%;
   }
 `;
 export const WorkHeading = styled.h1`
@@ -69,14 +93,60 @@ export const WorkSubHeading = styled.h5`
   font-weight: 400;
   margin-top: 0.5rem;
 `;
+
+export const Carousel = styled.div`
+  @media only screen and (max-width: 520px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+`;
+
+export const CarouselButton = styled.div``;
+
+export const Slider = styled.div`
+  display: none;
+  @media only screen and (max-width: 520px) {
+    display: block;
+    color: ${(props) => props.theme.projectDescriptionColor};
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+`;
+
 export const Detail = styled.div`
   display: flex;
   margin-top: 2rem;
+  @media only screen and (max-width: 520px) {
+    display: block;
+    min-width: 98%;
+  }
 `;
 
 export const ProjectImage = styled.div`
   height: 22rem;
   width: 60%;
+
+  @media only screen and (max-width: 520px) {
+    width: 100%;
+    height: 18rem;
+    display: none;
+  }
+
+  img {
+    @media only screen and (max-width: 520px) {
+      width: 100%;
+      height: 18rem;
+    }
+  }
 `;
 
 export const Overlay = styled.div`
@@ -88,8 +158,20 @@ export const Overlay = styled.div`
   &:hover {
     opacity: 0;
   }
+  @media only screen and (max-width: 520px) {
+    width: 100%;
+    height: 18rem;
+  }
 `;
 
+export const ProjectDetail = styled.div`
+  width: 40%;
+  margin-left: auto;
+
+  @media only screen and (max-width: 520px) {
+    min-width: 100%;
+  }
+`;
 export const ProjectTitle = styled.div`
   background: ${(props) => props.theme.headingColor};
   -webkit-background-clip: text;
@@ -98,10 +180,9 @@ export const ProjectTitle = styled.div`
   font-weight: 700;
   text-align: right;
   margin-bottom: 1rem;
-`;
-export const ProjectDetail = styled.div`
-  width: 40%;
-  margin-left: auto;
+  @media only screen and (max-width: 520px) {
+    text-align: left;
+  }
 `;
 export const ProjectDescription = styled.div`
   color: ${(props) => props.theme.projectDescriptionColor};
@@ -116,6 +197,13 @@ export const ProjectDescription = styled.div`
   width: 107%;
   right: 6rem;
   z-index: 1;
+  @media only screen and (max-width: 520px) {
+    width: 85%;
+    right: 0;
+    height: 10.5rem;
+    overflow-y: scroll;
+    padding: 1.8rem;
+  }
 `;
 export const ProjectStack = styled.div`
   color: ${(props) => props.theme.projectStackColor};
@@ -126,14 +214,26 @@ export const ProjectStack = styled.div`
   font-family: Rajdhani;
   font-weight: 600;
   word-spacing: 1.5rem;
+  @media only screen and (max-width: 520px) {
+    text-align: left;
+  }
 `;
 export const Links = styled.div`
   display: flex;
   align-items: center;
   justify-content: end;
+  @media only screen and (max-width: 520px) {
+    justify-content: start;
+  }
 `;
 export const GithubLink = styled.div`
   margin-right: 1rem;
+`;
+
+export const Partition = styled.div`
+  @media only screen and (max-width: 520px) {
+    display: none;
+  }
 `;
 export const DemoLink = styled.div``;
 
@@ -158,6 +258,9 @@ export const Para = styled.div`
   margin: auto;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  @media only screen and (max-width: 520px) {
+    width: 100%;
+  }
 `;
 
 export const Button = styled.div`

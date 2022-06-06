@@ -12,6 +12,8 @@ import demo from "../Resources/demo.svg";
 import demoDark from "../Resources/demoDark.svg";
 import chat_app from "../Resources/chat_app.png";
 import shopping_cart from "../Resources/shopping_cart.png";
+import menu from "../Resources/menu.svg";
+import menuDark from "../Resources/menuDark.svg";
 
 const Element = {
   mode,
@@ -28,5 +30,7 @@ const Element = {
   demoDark,
   chat_app,
   shopping_cart,
+  menu,
+  menuDark,
 };
 export default Element;

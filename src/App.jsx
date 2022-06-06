@@ -8,7 +8,6 @@ import About from "./components/about/about";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme, GlobalTheme } from "./theme";
 function App() {
-  // const [view, setView] = useState(true);
   const [theme, setTheme] = useState("dark");
   const toggleTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
@@ -19,20 +18,18 @@ function App() {
       easing: "ease",
     });
     AOS.refresh();
-  }, []);
+  }, [theme]);
   return (
     <ThemeProvider theme={() => (theme === "light" ? lightTheme : darkTheme)}>
       <GlobalTheme />
       <div className="App">
         <Router>
-          {/* <header > */}
           <Navbar theme={theme} onToggle={toggleTheme} />
           <Routes>
             <Route path="/" element={<Projects theme={theme} />} />
             <Route path="/about" element={<About theme={theme} />} />
           </Routes>
         </Router>
-        {/* {view ? <Projects /> : <About />} */}
       </div>
     </ThemeProvider>
   );

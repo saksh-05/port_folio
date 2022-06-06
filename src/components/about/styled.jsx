@@ -4,6 +4,9 @@ export const Container = styled.div`
   margin: auto;
   width: 50%;
   margin-top: 5rem;
+  @media only screen and (max-width: 520px) {
+    width: 80%;
+  }
 `;
 export const Heading = styled.div`
   font-size: 3rem;
