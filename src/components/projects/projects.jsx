@@ -224,7 +224,7 @@ const Projects = (props) => {
               </Links>
             </ProjectDetail>
             <ProjectImage>
-              <Overlay style={{ right: "0.5rem" }}></Overlay>
+              <Overlay style={{ right: "0rem" }}></Overlay>
               <img
                 src={Element.shopping_cart}
                 height="352px"
