@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   padding-bottom: 2rem;
@@ -25,11 +25,79 @@ export const Intro = styled.div`
   font-size: 1.5rem;
   color: ${(props) => props.theme.introColor};
 `;
+
+const fontColor = keyframes`
+0%{
+   background: ${(props) => props.theme.headingColor};
+}
+10%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor10
+       : props.theme.headingColor};
+}
+20%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor20
+       : props.theme.headingColor};
+}
+30%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor30
+       : props.theme.headingColor};
+}
+40%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor40
+       : props.theme.headingColor};
+}
+50%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor50
+       : props.theme.headingColor};
+}
+60%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor60
+       : props.theme.headingColor};
+}
+70%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor70
+       : props.theme.headingColor};
+}
+80%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor80
+       : props.theme.headingColor};
+}
+90%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor90
+       : props.theme.headingColor};
+}
+100%{
+   background: ${(props) =>
+     props.theme === "light"
+       ? props.theme.headingColor100
+       : props.theme.headingColor};
+}
+`;
+
 export const Name = styled.div`
   font-size: 5rem;
   font-weight: 700;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  animation: ${fontColor} 2s linear infinite;
   background: ${(props) => props.theme.headingColor};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
